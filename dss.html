@@ -2,588 +2,600 @@
 <html>
 <head>
 
-  <style>
+	<style>
 
-    header {
-      background-color: transparent;
-      border-bottom: 1px solid #466995;
-      position: relative;
-      width: 100%;
-      z-index: 10;
-      text-align: center;
-    }
+		header {
+			background-color: transparent;
+			border-bottom: 1px solid #466995;
+			position: relative;
+			width: 100%;
+			z-index: 10;
+			text-align: center;
+		}
 
-    body {
-      background: linear-gradient(to right, beige, #FFCC99);
-    }
+		body {
+			background: linear-gradient(to right, beige, #FFCC99);
+		}
 
-    li {
-      color: #ffffff;
-      font-family: 'Oswald', sans-serif;
-      font-size: 16px;
-      font-weight: 300;
-      text-transform: uppercase;
-      display: inline-block;
-      width: relative;
-      height: relative;
-      text-align: center;
-      margin: 20px;
-      background-color: white;
-    }
+		li {
+			color: #ffffff;
+			font-family: 'Oswald', sans-serif;
+			font-size: 16px;
+			font-weight: 300;
+			text-transform: uppercase;
+			display: inline-block;
+			width: relative;
+			height: relative;
+			text-align: center;
+			margin: 20px;
+			background-color: white;
+		}
 
-    h4 {
-      color: #466995;
-      font-family: 'Oswald', sans-serif;
-      font-size: 18px;
-      font-weight: 300;
-      letter-spacing: 2px;
-      text-align: left;
-      text-transform: uppercase;
-      position: relative;
-    }
+		h4 {
+			color: #466995;
+			font-family: 'Oswald', sans-serif;
+			font-size: 18px;
+			font-weight: 300;
+			letter-spacing: 2px;
+			text-align: left;
+			text-transform: uppercase;
+			position: relative;
+		}
 
-    .welcome {
-      font-family: sans-serif;
-      background-color: transparent;
-      box-sizing: border-box;
-      padding: 10px;
-      text-align: center;
-      width: 100%;
-      position: relative;
-      top: 10px;
-    }
+		.welcome {
+			font-family: sans-serif;
+			background-color: transparent;
+			box-sizing: border-box;
+			padding: 10px;
+			text-align: center;
+			width: 100%;
+			position: relative;
+			top: 10px;
+		}
 
-    .radioContainer {
-      display: inline-block;
-      position: relative;
-      cursor: pointer;
-      font-family: sans-serif;
-      font-size: 18px;
-      user-select: none;
-      padding-left: 30px;
-    }
-  
-    .radioContainer input {
-      display: none;
-    }
+		.radioContainer {
+			display: inline-block;
+			position: relative;
+			cursor: pointer;
+			font-family: sans-serif;
+			font-size: 18px;
+			user-select: none;
+			padding-left: 30px;
+		}
 
-    .radioContainer .circle {
-      display: inline-block;
-      width: 25px;
-      height: 25px;
-      background-color: silver;
-      position: absolute;
-      left: 0;
-      top: 0;
-      border-radius: 50%;
-    }
+		.radioContainer input {
+			display: none;
+		}
 
-    .radioContainer:hover .circle {
-      background-color: gray;
-    }
+		.radioContainer .circle {
+			display: inline-block;
+			width: 25px;
+			height: 25px;
+			background-color: silver;
+			position: absolute;
+			left: 0;
+			top: 0;
+			border-radius: 50%;
+		}
 
-    .radioContainer input:checked + .circle {
-      background-color: #2196fc;
-    }
+		.radioContainer:hover .circle {
+			background-color: gray;
+		}
 
-    .radioContainer input:checked + .circle:after {
-      content: "";
-      height: 10px;
-      width: 10px;
-      position: absolute;
-      background-color: white;
-      border-radius: 50%;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%,-50%);
-    }
+		.radioContainer input:checked + .circle {
+			background-color: #2196fc;
+		}
 
-    .aboutus {
-      font-size: 20px;
-      font-family: sans-serif;
-    }
+		.radioContainer input:checked + .circle:after {
+			content: "";
+			height: 10px;
+			width: 10px;
+			position: absolute;
+			background-color: white;
+			border-radius: 50%;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+		}
 
-    select {
-      border: 50px;
-      font-family: sans-serif;
-      font-size: 18px;
-      color: #000;
-    }
+		.aboutus {
+			font-size: 20px;
+			font-family: sans-serif;
+		}
 
-    .button {
-      background-color: #2196fc; /* Green */
-      border-color: light blue;
-      color: white;
-      padding: 15px 15px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 18px;
-      font-family: sans-serif;
-      position: relative;
-    }
+		select {
+			border: 50px;
+			font-family: sans-serif;
+			font-size: 18px;
+			color: #000;
+		}
 
-    .button:hover {
-      color: black;
-    }
+		.button {
+			background-color: #2196fc; /* Green */
+			border-color: light blue;
+			color: white;
+			padding: 15px 15px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 18px;
+			font-family: sans-serif;
+			position: relative;
+		}
 
-    h3 {
-      color: #466995;
-      font-family: 'Oswald', sans-serif;
-      font-size: 18px;
-      text-align: center;
-      font-weight: 700;
-      text-transform: uppercase;
-      padding: 30px;
-    }
+		.button:hover {
+			color: black;
+		}
 
-    footer {
-      background-color: transparent;
-      text-align: center;
-    }
+		h3 {
+			color: #466995;
+			font-family: 'Oswald', sans-serif;
+			font-size: 18px;
+			text-align: center;
+			font-weight: 700;
+			text-transform: uppercase;
+			padding: 30px;
+		}
 
-    .tooltip {
-      position: relative;
-      display: inline-block;
-    }
+		footer {
+			background-color: transparent;
+			text-align: center;
+		}
 
-    .tooltip .tooltiptext {
-      visibility: hidden;
-      width: 120px;
-      background-color: black;
-      color: #fff;
-      text-align: center;
-      border-radius: 4px;
-      padding: 2px 0;
-      position: right;
-      z-index: 1;
-    }
+		.tooltip {
+			position: relative;
+			display: inline-block;
+		}
 
-    .tooltip:hover .tooltiptext {
-      visibility: visible;
-    }
+		.tooltip .tooltiptext {
+			visibility: hidden;
+			width: 120px;
+			background-color: black;
+			color: #fff;
+			text-align: center;
+			border-radius: 4px;
+			padding: 2px 0;
+			position: right;
+			z-index: 1;
+		}
 
-  </style>
+		.tooltip:hover .tooltiptext {
+			visibility: visible;
+		}
+
+	</style>
 
 
-  <title>Breast Cancer</title>
+	<title>Breast Cancer</title>
 
 </head>
 
 <body>
 
-  <div class="welcome">
-    <h1><strong>Welcome</strong> to this Decision Support System regarding<br/> Breast Cancer.</h1>
-    <p>This DSS is a health information technology system that is designed to provide physicians<br/> and other health professionals with clinical decision support (CDS), that is, assistance with clinical decision-making tasks. <br/><br/>Based on a set of rules produced by a data set provided by the Institute of Oncology (University Medical Center, Ljubljana, Yugoslavia), <br/>the system will process the data input and make a prediction on whether the patient may experience recurrence of the cancer.</p>
-    <p><u>It is adviced, in order for the system to make the best "prediction" possible, to choose carefully your answer for every question and avoid blank answers.</u></p>
-  </div>
+	<div class="welcome">
+		<h1><strong>Welcome</strong> to this Decision Support System regarding<br/> Breast Cancer.</h1>
+		<p>This DSS is a health information technology system that is designed to provide physicians<br/> and other health professionals with clinical decision support (CDS), that is, assistance with clinical decision-making tasks. <br/><br/>Based on a set of rules produced by a data set provided by the Institute of Oncology (University Medical Center, Ljubljana, Yugoslavia), <br/>the system will process the data input and make a prediction on whether the patient may experience recurrence of the cancer.</p>
+		<p><u>It is adviced, in order for the system to make the best "prediction" possible, to choose carefully your answer for every question and avoid blank answers.</u></p>
+	</div>
 
 
-<div><h4><strong>1)</strong> Age</h4>
-	<select id="age" onchange="getAge();">
-    <option value="?">Select your age:</option>
-    <option value="10-19"> 10-19</option>
-    <option value="20-29"> 20-29</option>
-    <option value="30-39"> 30-39</option>
-    <option value="40-49"> 40-49</option>
-    <option value="50-59"> 50-59</option>
-    <option value="60-69"> 60-69</option>
-    <option value="70-79"> 70-79</option>
-    <option value="80-89"> 80-89</option>
-    <option value="90-99"> 90-99</option>
-	</select>  
+	<div><h4><strong>1)</strong> Age</h4>
+		<select id="age" onchange="getAge();">
+			<option value="?">Select your age:</option>
+			<option value="10-19"> 10-19</option>
+			<option value="20-29"> 20-29</option>
+			<option value="30-39"> 30-39</option>
+			<option value="40-49"> 40-49</option>
+			<option value="50-59"> 50-59</option>
+			<option value="60-69"> 60-69</option>
+			<option value="70-79"> 70-79</option>
+			<option value="80-89"> 80-89</option>
+			<option value="90-99"> 90-99</option>
+		</select>  
 
-  </div>    
+	</div>    
     
 
-<div class="tooltip"><h4><strong>2)</strong> Menopause</h4>
-  <span class="tooltiptext">Whether the patient is pre- or postmenopausal at time of diagnosis</span>
-  </div>
+	<div class="tooltip"><h4><strong>2)</strong> Menopause</h4>
+		<span class="tooltiptext">Whether the patient is pre- or postmenopausal at time of diagnosis</span>
+		</div>
+		<div>
+			<label class="radioContainer">&nbsp 
+			<input type="radio" name="menopause" value="lt40" onclick="getMenopause();"/> lt40&nbsp&nbsp&nbsp&nbsp&nbsp 
+			<span class="circle"></span></label>
 
-  <div>
-      <label class="radioContainer">&nbsp 
-  	    <input type="radio" name="menopause" value="lt40" onclick="getMenopause();"/> lt40&nbsp&nbsp&nbsp&nbsp&nbsp 
-      <span class="circle"></span></label>
+			<label class="radioContainer">&nbsp
+			<input type="radio" name="menopause" value="ge40" onclick="getMenopause();"/> ge40&nbsp&nbsp&nbsp&nbsp&nbsp
+			<span class="circle"></span></label>
 
-      <label class="radioContainer">&nbsp
-        <input type="radio" name="menopause" value="ge40" onclick="getMenopause();"/> ge40&nbsp&nbsp&nbsp&nbsp&nbsp   
-      <span class="circle"></span></label>
-
-      <label class="radioContainer">&nbsp
-        <input type="radio" name="menopause" value="premeno" onclick="getMenopause();"/> premeno&nbsp&nbsp&nbsp&nbsp&nbsp   
-      <span class="circle"></span></label>
-  </div>    
+			<label class="radioContainer">&nbsp
+			<input type="radio" name="menopause" value="premeno" onclick="getMenopause();"/> premeno&nbsp&nbsp&nbsp&nbsp&nbsp   
+			<span class="circle"></span></label>
+	</div>    
     
 
-<div class="tooltip"><h4><strong>3)</strong> Tumor Size</h4>
-  <span class="tooltiptext">The greatest diameter (in mm) of the excised tumor</span>
-  </div>
-  <div>
-  	<select id="tumor_size" onchange="getTumorSize();">
-  		<option value="?">Select size:</option>
-      <option value="0-4"> 0-4</option>
-      <option value="5-9"> 5-9</option>
-      <option value="10-14"> 10-14</option>
-      <option value="15-19"> 15-19</option>
-      <option value="20-24"> 20-24</option>
-      <option value="25-29"> 25-29</option>
-      <option value="30-34"> 30-34</option>
-      <option value="35-39"> 35-39</option>
-      <option value="40-44"> 40-44</option>
-      <option value="45-49"> 45-49</option>
-      <option value="50-54"> 50-54</option>
-      <option value="55-59"> 55-59</option>
-  	</select>    
-  </div>  
+	<div class="tooltip"><h4><strong>3)</strong> Tumor Size</h4>
+		<span class="tooltiptext">The greatest diameter (in mm) of the excised tumor</span>
+		</div>
+		<div>
+			<select id="tumor_size" onchange="getTumorSize();">
+  				<option value="?">Select size:</option>
+				<option value="0-4"> 0-4</option>
+				<option value="5-9"> 5-9</option>
+				<option value="10-14"> 10-14</option>
+				<option value="15-19"> 15-19</option>
+				<option value="20-24"> 20-24</option>
+				<option value="25-29"> 25-29</option>
+				<option value="30-34"> 30-34</option>
+				<option value="35-39"> 35-39</option>
+				<option value="40-44"> 40-44</option>
+				<option value="45-49"> 45-49</option>
+				<option value="50-54"> 50-54</option>
+				<option value="55-59"> 55-59</option>
+			</select>
+		</div>  
     
 
-<div class="tooltip"><h4><strong>4)</strong> Inv-Nodes</h4>
-  <span class="tooltiptext">The number of axillary lymph nodes that contain metastatic breast cancer visible on histological examination</span>
-  </div>
-  <div>
-  	<select id="inv_nodes" onchange="getInvNodes();">
-  		<option value="?">Select number:</option>
-      <option value="0-2"> 0-2</option>
-      <option value="3-5"> 3-5</option>
-      <option value="6-8"> 6-8</option>
-      <option value="9-11"> 9-11</option>
-      <option value="12-14"> 12-14</option>
-      <option value="15-17"> 15-17</option>
-      <option value="18-20"> 18-20</option>
-      <option value="21-23"> 21-23</option>
-      <option value="24-26"> 24-26</option>
-      <option value="27-29"> 27-29</option>
-      <option value="30-32"> 30-32</option>
-      <option value="33-35"> 33-35</option>
-      <option value="36-39"> 36-39</option>
-  	</select>    
-  </div>  
+	<div class="tooltip"><h4><strong>4)</strong> Inv-Nodes</h4>
+		<span class="tooltiptext">The number of axillary lymph nodes that contain metastatic breast cancer visible on histological examination</span>
+		</div>
+		<div>
+			<select id="inv_nodes" onchange="getInvNodes();">
+				<option value="?">Select number:</option>
+				<option value="0-2"> 0-2</option>
+				<option value="3-5"> 3-5</option>
+				<option value="6-8"> 6-8</option>
+				<option value="9-11"> 9-11</option>
+				<option value="12-14"> 12-14</option>
+				<option value="15-17"> 15-17</option>
+				<option value="18-20"> 18-20</option>
+				<option value="21-23"> 21-23</option>
+				<option value="24-26"> 24-26</option>
+				<option value="27-29"> 27-29</option>
+				<option value="30-32"> 30-32</option>
+				<option value="33-35"> 33-35</option>
+				<option value="36-39"> 36-39</option>
+			</select>    
+		</div>  
     
 
-<h4><strong>5)</strong> Node Caps</h4>
-  <p style="font-family: sans-serif; font-size: 16px;">If the cancer does metastasise to a lymph node, although outside the original site<br/>of the tumor it may remain “contained” by the capsule of the lymph node. However,<br/> over time, and with more aggressive disease, the tumor may replace the lymph<br/> node and then penetrate the capsule, allowing it to invade the surrounding tissues</p>
-  <div>
-    <label class="radioContainer">&nbsp 
-      <input type="radio" name="node_caps" value="yes" onclick="getNodeCaps();"/> Yes&nbsp&nbsp&nbsp&nbsp&nbsp
-    <span class="circle"></span></label>
+	<h4><strong>5)</strong> Node Caps</h4>
+		<p style="font-family: sans-serif; font-size: 16px;">If the cancer does metastasise to a lymph node, although outside the original site<br/>of the tumor it may remain “contained” by the capsule of the lymph node. However,<br/> over time, and with more aggressive disease, the tumor may replace the lymph<br/> node and then penetrate the capsule, allowing it to invade the surrounding tissues</p>
+		<div>
+			<label class="radioContainer">&nbsp 
+			<input type="radio" name="node_caps" value="yes" onclick="getNodeCaps();"/> Yes&nbsp&nbsp&nbsp&nbsp&nbsp
+			<span class="circle"></span></label>
 
-    <label class="radioContainer">&nbsp 
-      <input type="radio" name="node_caps" value="no" onclick="getNodeCaps();"/> No&nbsp&nbsp&nbsp&nbsp&nbsp
-    <span class="circle"></span></label>
-  </div>
+			<label class="radioContainer">&nbsp 
+			<input type="radio" name="node_caps" value="no" onclick="getNodeCaps();"/> No&nbsp&nbsp&nbsp&nbsp&nbsp
+			<span class="circle"></span></label>
+		</div>
+
     
-    
-<div class="tooltip"><h4><strong>6)</strong> Degree of Malignancy</h4>
-  <span class="tooltiptext">The histological grade of the tumor</span>
-  </div>
+	<div class="tooltip"><h4><strong>6)</strong> Degree of Malignancy</h4>
+		<span class="tooltiptext">The histological grade of the tumor</span>
+		</div>
+		<div>
+			<label class="radioContainer">&nbsp 
+			<input type="radio" name="deg_malig" value="1" onclick="getDegMalig();"/> 1&nbsp&nbsp&nbsp&nbsp&nbsp
+			<span class="circle"></span></label>
 
-  <div>
-  <label class="radioContainer">&nbsp 
-	  <input type="radio" name="deg_malig" value="1" onclick="getDegMalig();"/> 1&nbsp&nbsp&nbsp&nbsp&nbsp
-  <span class="circle"></span></label>
-  
-  <label class="radioContainer">&nbsp 
-    <input type="radio" name="deg_malig" value="2" onclick="getDegMalig();"/> 2&nbsp&nbsp&nbsp&nbsp&nbsp
-  <span class="circle"></span></label>
+			<label class="radioContainer">&nbsp 
+			<input type="radio" name="deg_malig" value="2" onclick="getDegMalig();"/> 2&nbsp&nbsp&nbsp&nbsp&nbsp
+			<span class="circle"></span></label>
 
-  <label class="radioContainer">&nbsp 
-    <input type="radio" name="deg_malig" value="3" onclick="getDegMalig();"/> 3&nbsp&nbsp&nbsp&nbsp&nbsp
-  <span class="circle"></span></label>  
-</div>
+			<label class="radioContainer">&nbsp 
+			<input type="radio" name="deg_malig" value="3" onclick="getDegMalig();"/> 3&nbsp&nbsp&nbsp&nbsp&nbsp
+			<span class="circle"></span></label>  
+		</div>
     
 
-<div class="tooltip"><h4><strong>7)</strong> Breast</h4>
-  <span class="tooltiptext">Breast cancer may occur in either breast</span></div>
+	<div class="tooltip"><h4><strong>7)</strong> Breast</h4>
+		<span class="tooltiptext">Breast cancer may occur in either breast</span></div>
+		<div>
+			<label class="radioContainer">&nbsp
+			<input type="radio" name="breast" value="right" onclick="getBreast();"/> Right&nbsp&nbsp&nbsp&nbsp&nbsp
+			<span class="circle"></span></label> 
 
-  <div>
-  <label class="radioContainer">&nbsp
-	  <input type="radio" name="breast" value="right" onclick="getBreast();"/> Right&nbsp&nbsp&nbsp&nbsp&nbsp
-  <span class="circle"></span></label> 
-  
-  <label class="radioContainer">&nbsp
-    <input type="radio" name="breast" value="left" onclick="getBreast();"/> Left&nbsp&nbsp&nbsp&nbsp&nbsp
-  <span class="circle"></span></label> 
-  </div>
+			<label class="radioContainer">&nbsp
+			<input type="radio" name="breast" value="left" onclick="getBreast();"/> Left&nbsp&nbsp&nbsp&nbsp&nbsp
+			<span class="circle"></span></label> 
+		</div>
 
         
-<div class="tooltip"><h4><strong>8)</strong> Breast Quadrant</h4>
-  <span class="tooltiptext">The breast may be divided into four quadrants, using the nipple as a central point</span>
-  </div>
-  <div>
-  	<select id="breast_quad" onchange="getBreastQuad();">
-  		<option value="?">Select breast quadrant:</option>
-          <option value="left_up"> Left Upper Quadrant</option>
-          <option value="left_low"> Left Lower Quadrant</option>
-          <option value="right_up"> Right Upper Quadrant</option>
-          <option value="right_low"> Right Lower Quadrant</option>
-          <option value="central"> Central</option>
-  	</select>
-  <div>    
+	<div class="tooltip"><h4><strong>8)</strong> Breast Quadrant</h4>
+		<span class="tooltiptext">The breast may be divided into four quadrants, using the nipple as a central point</span>
+		</div>
+		<div>
+			<select id="breast_quad" onchange="getBreastQuad();">
+				<option value="?">Select breast quadrant:</option>
+				<option value="left_up"> Left Upper Quadrant</option>
+				<option value="left_low"> Left Lower Quadrant</option>
+				<option value="right_up"> Right Upper Quadrant</option>
+				<option value="right_low"> Right Lower Quadrant</option>
+				<option value="central"> Central</option>
+			</select>
+		</div>
     
-<div class="tooltip"><h4><strong>9)</strong> Irradiation</h4>
-  <span class="tooltiptext">Radiation therapy is a treatment that uses high-energy x-rays to destroy cancer cells</span>
-  </div>
-  <div>
-    <label class="radioContainer">&nbsp
-      <input type="radio" name="irradiat" value="yes" onclick="getIrradiat();"/> Yes&nbsp&nbsp&nbsp&nbsp&nbsp
-    <span class="circle"></span></label> 
+	<div class="tooltip"><h4><strong>9)</strong> Irradiation</h4>
+		<span class="tooltiptext">Radiation therapy is a treatment that uses high-energy x-rays to destroy cancer cells</span>
+		</div>
+		<div>
+			<label class="radioContainer">&nbsp
+			<input type="radio" name="irradiat" value="yes" onclick="getIrradiat();"/> Yes&nbsp&nbsp&nbsp&nbsp&nbsp
+			<span class="circle"></span></label> 
 
-    <label class="radioContainer">&nbsp
-      <input type="radio" name="irradiat" value="no" onclick="getIrradiat();"/> No&nbsp&nbsp&nbsp&nbsp&nbsp
-    <span class="circle"></span></label> 
-  </div>
+			<label class="radioContainer">&nbsp
+			<input type="radio" name="irradiat" value="no" onclick="getIrradiat();"/> No&nbsp&nbsp&nbsp&nbsp&nbsp
+			<span class="circle"></span></label> 
+		</div>
 
 
-<footer>
-<div>
-    <input id="clickMe" class="button" type="button" value="Click here for results" onclick="display();" />
-  </div>
+	<footer>
+		<div>
+			<input id="clickMe" class="button" type="button" value="Click here for results" onclick="display();" />
+		</div>
 
     
-    <ul>
-
-      <li><a href="https://github.com/p15tsiv/DSS-Breast-Cancer">Github</a></li>
-      <li><a href="https://github.com/p15tsiv">Chrysa</a></li>
-      <li><a href="https://github.com/JGiab">Jim</a></li>
-      <li><a href="">Report</a></li>
-      <li><a href="http://www.breastcancer.org/">Learn more</a></li>
-    </ul>
+		<ul>
+			<li><a href="https://github.com/p15tsiv/DSS-Breast-Cancer">Github</a></li>
+			<li><a href="https://github.com/p15tsiv">Chrysa</a></li>
+			<li><a href="https://github.com/JGiab">Jim</a></li>
+			<li><a href="">Report</a></li>
+			<li><a href="http://www.breastcancer.org/">Learn more</a></li>
+		</ul>
   
-  </footer> 
+	</footer> 
     
-<script>
-	  var age;
-    var menopause;
-    var tumor_size;
-	  var inv_nodes;
-    var node_caps;
-    var deg_malig;
-    var breast;
-    var breast_quad;
-    var irradiat;
-    var result;
+	<script>
+		var age;
+		var menopause;
+		var tumor_size;
+		var inv_nodes;
+		var node_caps;
+		var deg_malig;
+		var breast;
+		var breast_quad;
+		var irradiat;
+		var result;
 
-	  function getAge() {
-    	age = document.getElementById("age").value;   
-    }
+		
+		function getAge() {
+			age = document.getElementById("age").value;   
+		}
     
-    function getMenopause() {
-    	var typeMenopause = document.getElementsByName("menopause");
-        if (typeMenopause[0].checked) {
-        	menopause = typeMenopause[0].value;
-        }
-        else if (typeMenopause[1].checked) {
-        	menopause = typeMenopause[1].value;
-        }
-        else if (typeMenopause[2].checked) {
-        	menopause = typeMenopause[2].value;
-        }
-	  }
+		
+		function getMenopause() {
+			var typeMenopause = document.getElementsByName("menopause");
+			if (typeMenopause[0].checked) {
+				menopause = typeMenopause[0].value;
+			}
+			else if (typeMenopause[1].checked) {
+				menopause = typeMenopause[1].value;
+			}
+			else if (typeMenopause[2].checked) {
+				menopause = typeMenopause[2].value;
+        		}
+	  	}
 
-	  function getTumorSize() {
-    	tumor_size = document.getElementById("tumor_size").value;
-    } 
+		
+		function getTumorSize() {
+			tumor_size = document.getElementById("tumor_size").value;
+		} 
 	  
-    function getInvNodes() {
-    	inv_nodes = document.getElementById("inv_nodes").value;
-    }   
+		function getInvNodes() {
+			inv_nodes = document.getElementById("inv_nodes").value;
+		}
     
-    function getNodeCaps() {
-    	var typeNodeCaps = document.getElementsByName("node_caps");
-        if (typeNodeCaps[0].checked) {
-        	node_caps = typeNodeCaps[0].value
-        }
-        else if (typeNodeCaps[1].checked) {
-        	node_caps = typeNodeCaps[1].value
-        }
-        else if (typeNodeCaps[2].checked) {
-        	node_caps = typeNodeCaps[2].value
-        }
-	  }
+		
+		function getNodeCaps() {
+			var typeNodeCaps = document.getElementsByName("node_caps");
+			if (typeNodeCaps[0].checked) {
+				node_caps = typeNodeCaps[0].value
+			}
+			else if (typeNodeCaps[1].checked) {
+				node_caps = typeNodeCaps[1].value
+			}
+			else if (typeNodeCaps[2].checked) {
+				node_caps = typeNodeCaps[2].value
+			}
+		}
 	  
-    function getDegMalig() {
-     	var typeDegMalig = document.getElementsByName("deg_malig");
-        if (typeDegMalig[0].checked) {
-     	   deg_malig = typeDegMalig[0].value;
-        }
-        else if (typeDegMalig[1].checked) {
-        	deg_malig = typeDegMalig[1].value;
-        }
-        else if (typeDegMalig[2].checked) {
-        	deg_malig = typeDegMalig[2].value;
-        }
-    }
+		
+		function getDegMalig() {
+			var typeDegMalig = document.getElementsByName("deg_malig");
+			if (typeDegMalig[0].checked) {
+				deg_malig = typeDegMalig[0].value;
+			}
+			else if (typeDegMalig[1].checked) {
+				deg_malig = typeDegMalig[1].value;
+			}
+			else if (typeDegMalig[2].checked) {
+				deg_malig = typeDegMalig[2].value;
+			}
+		}
         
-    function getBreast() {
-		  var typeBreast = document.getElementsByName("breast");
-        if (typeBreast[0].checked) {
-        	breast = typeBreast[0].value;
-       	}
-        else if (typeBreast[1].checked) {
-        	breast = typeBreast[1].value;
-        }
-	  }
+		
+		function getBreast() {
+			var typeBreast = document.getElementsByName("breast");
+			if (typeBreast[0].checked) {
+				breast = typeBreast[0].value;
+			}
+			else if (typeBreast[1].checked) {
+				breast = typeBreast[1].value;
+			}
+		}
         
-	  function getBreastQuad() {
-    	breast_quad = document.getElementById("breast_quad").value;
-	  }   
+		
+		function getBreastQuad() {
+			breast_quad = document.getElementById("breast_quad").value;
+		}
         
-    function getIrradiat() {
-		  var typeIrradiat = document.getElementsByName("irradiat");
-        if (typeIrradiat[0].checked) {
-        	irradiat = typeIrradiat[0].value;
-        }
-        else if (typeIrradiat[1].checked) {
-        	irradiat = typeIrradiat[1].value;
-        }
-        else if (typeIrradiat[2].checked) {
-        	irradiat = typeIrradiat[2].value;
-        }
-    }
+		
+		function getIrradiat() {
+			var typeIrradiat = document.getElementsByName("irradiat");
+			if (typeIrradiat[0].checked) {
+				irradiat = typeIrradiat[0].value;
+			}
+			else if (typeIrradiat[1].checked) {
+				irradiat = typeIrradiat[1].value;
+			}
+			else if (typeIrradiat[2].checked) {
+				irradiat = typeIrradiat[2].value;
+			}
+		}
     
-    function display() {
-    	if (irradiat === "yes") {
-      if (tumor_size === "0-4" ||
-          tumor_size === "5-9" ||
-          tumor_size === "10-14" ||
-          tumor_size === "15-19" || 
-          tumor_size === "20-24" ||
-          tumor_size === "30-34" ||
-          tumor_size === "55-59") {
-            result = "recurrence";
-      }
-      else if (tumor_size === "25-29" ||
-               tumor_size === "40-44") {
-        if (breast === "left") {
-          result = "recurrence";
-        }
-        else if (breast === "right") {
-          result = "no-recurrence";
-        }
-      }
-    }
-    else if (irradiat === "no") {
-      if (inv_nodes === "0-2") {
-        if (breast_quad === "left_up" ||
-            breast_quad === "right_low") {
-              result = "no-recurrence";
-        }
-        else if (breast_quad === "left_low") {
-          if (breast === "left") {
-            result = "no-recurrence";
-          }
-          else if (breast === "right") {
-            if (menopause === "lt40" ||
-                menopause === "premeno") {
-              result = "recurrence";
-            }
-            else if (menopause === "ge40") {
-              result = "no-recurrence";
-            }
-          }
-        }
-        else if (breast_quad === "right_up") {
-          if (menopause == "lt40" ||
-              menopause == "ge40") {
-            result = "no-recurrence";
-          }
-        else if (menopause == "premeno") {
-          if (tumor_size == "30-34") {
-            result = "no-recurrence";
-          }
-          else if (tumor_size == "0-4" ||
-                   tumor_size == "5-9" || 
-                   tumor_size == "10-14" || 
-                   tumor_size == "15-19" ||
-                   tumor_size == "20-24" || 
-                   tumor_size == "25-29" ||
-                   tumor_size == "35-39" || 
-                   tumor_size == "40-44" ||
-                   tumor_size == "45-49" || 
-                   tumor_size == "50-54" ||
-                   tumor_size == "55-59") {
-            result = "recurrence";
-          }
-        }
-      }
-      else if (breast_quad === "central") {
-        if (deg_malig === "1") {
-          result = "no-recurrence";
-        }
-        else if (deg_malig === "2") {
-          if (breast === "left") {
-            result = "no-recurrence";
-          }
-          else if (breast === "right") {
-            result = "recurrence";
-          }
-        }
-        else if (deg_malig === "3") {
-          result = "recurrence";
-        }
-      }
-    }
-    else if (inv_nodes === "3-5") {
-      if (age === "10-19" ||
-          age === "20-29" ||
-          age === "30-39" ||
-          age === "40-49" ||
-          age === "60-69" ||
-          age === "70-79" ||
-          age === "80-89" ||
-          age === "90-99") {
-        result = "recurrence";
-      }
-      else if (age === "50-59") {
-        result = "no-recurrence";
-      }
-    }
-    else if (inv_nodes === "6-8") {
-      if (tumor_size === "45-49") {
-        result = "no-recurrence";
-      }
-      else if (tumor_size === "0-4" ||
-               tumor_size === "5-9" ||
-               tumor_size === "10-14" || 
-               tumor_size === "15-19" ||
-               tumor_size === "20-24" || 
-               tumor_size === "25-29" ||
-               tumor_size === "30-34" ||
-               tumor_size === "35-39" || 
-               tumor_size === "40-44" ||
-               tumor_size === "50-54" ||
-               tumor_size === "55-59") {
-        result = "recurrence";
-      }
-    }
-    else if (inv_nodes === "9-11") {
-      result = "recurrence";
-    }
-    else if (inv_nodes === "15-17") {
-      if (menopause === "premeno") {
-        result = "recurrence";
-      }
-      else if (menopause === "ge40" ||
-               menopause === "lt40") {
-        result = "no-recurrence";
-      }
-    }
-    else if (inv_nodes === "12-14" ||
-             inv_nodes === "18-20" ||
-             inv_nodes === "21-23" ||
-             inv_nodes === "24-26" ||
-             inv_nodes === "27-29" ||
-             inv_nodes === "30-32" ||
-             inv_nodes === "33-35" ||
-             inv_nodes === "36-39" ) {
-      result = "no-recurrence";
-    }
-    }
-    document.write(result);
-      }
-    
-</script> 
 
+		function display() {
+			if (irradiat === "yes") {
+				if (tumor_size === "0-4" ||
+				    tumor_size === "5-9" ||
+				    tumor_size === "10-14" ||
+				    tumor_size === "15-19" ||
+				    tumor_size === "20-24" ||
+				    tumor_size === "30-34" ||
+				    tumor_size === "55-59") {
+					result = "recurrence";
+				}
+				else if (tumor_size === "25-29" || 
+					 tumor_size === "40-44") {
+					if (breast === "left") {
+						result = "recurrence";
+					}
+					else if (breast === "right") {
+						result = "no-recurrence";
+					}
+				}
+			}
+			else if (irradiat === "no") {
+				if (inv_nodes === "0-2") {
+					if (breast_quad === "left_up" ||
+					    breast_quad === "right_low") {
+						result = "no-recurrence";
+					}
+					else if (breast_quad === "left_low") {
+						if (breast === "left") {
+							result = "no-recurrence";
+						}
+						else if (breast === "right") {
+							if (menopause === "lt40" ||
+							    menopause === "premeno") {
+								result = "recurrence";
+							}
+							else if (menopause === "ge40") {
+								result = "no-recurrence";
+							}
+						}
+					}
+					else if (breast_quad === "right_up") {
+						if (menopause === "lt40" ||
+						    menopause === "ge40") {
+							result = "no-recurrence";
+						}
+						else if (menopause === "premeno") {
+							if (tumor_size === "30-34") {
+								result = "no-recurrence";
+							}
+							else if (tumor_size === "0-4" ||
+								 tumor_size === "5-9" || 
+								 tumor_size === "10-14" ||
+								 tumor_size === "15-19" ||
+								 tumor_size === "20-24" ||
+								 tumor_size === "25-29" ||
+								 tumor_size === "35-39" ||
+								 tumor_size === "40-44" ||
+								 tumor_size === "45-49" ||
+								 tumor_size === "50-54" ||
+								 tumor_size === "55-59") {
+								result = "recurrence";
+							}
+						}
+					}
+					else if (breast_quad === "central") {
+						if (deg_malig === "1") {
+							result = "no-recurrence";
+						}
+						else if (deg_malig === "2") {
+							if (breast === "left") {
+								result = "no-recurrence";
+							}
+							else if (breast === "right") {
+								result = "recurrence";
+							}
+						}
+						else if (deg_malig === "3") {
+							result = "recurrence";
+						}
+					}
+				}
+				else if (inv_nodes === "3-5") {
+					if (age === "10-19" ||
+					    age === "20-29" ||
+					    age === "30-39" ||
+					    age === "40-49" ||
+					    age === "60-69" ||
+					    age === "70-79" ||
+					    age === "80-89" ||
+					    age === "90-99") {
+						result = "recurrence";
+					}
+					else if (age === "50-59") {
+						result = "no-recurrence";
+					}
+				}
+				else if (inv_nodes === "6-8") {
+					if (tumor_size === "45-49") {
+						result = "no-recurrence";
+					}
+					else if (tumor_size === "0-4" ||
+						 tumor_size === "5-9" ||
+						 tumor_size === "10-14" ||
+						 tumor_size === "15-19" ||
+						 tumor_size === "20-24" ||
+						 tumor_size === "25-29" ||
+						 tumor_size === "30-34" ||
+						 tumor_size === "35-39" ||
+						 tumor_size === "40-44" ||
+						 tumor_size === "50-54" ||
+						 tumor_size === "55-59") {
+						result = "recurrence";
+					}
+				}
+				else if (inv_nodes === "9-11") {
+					result = "recurrence";
+				}
+				else if (inv_nodes === "15-17") {
+					if (menopause === "premeno") {
+						result = "recurrence";
+					}
+					else if (menopause === "ge40" ||
+						 menopause === "lt40") {
+						result = "no-recurrence";
+					}
+				}
+				else if (inv_nodes === "12-14" ||
+					 inv_nodes === "18-20" ||
+					 inv_nodes === "21-23" ||
+					 inv_nodes === "24-26" ||
+					 inv_nodes === "27-29" ||
+					 inv_nodes === "30-32" ||
+					 inv_nodes === "33-35" ||
+					 inv_nodes === "36-39" ) {
+					result = "no-recurrence";
+				}
+			}
+			if (result === "recurrence") {
+				alert("RESULT: The patient may experience recurrence.");
+			}
+			else if (result === "no-recurrence") {
+				alert("RESULT: The patient may experience no recurrence.");
+			}
+			else {
+				alert("You need to input more data in order to get a result.");
+			}
+		}
+    
+	</script> 
 
 </body>
 
